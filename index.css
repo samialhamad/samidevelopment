@@ -1,0 +1,23 @@
+
+body {
+    background-color: #b6b1af;
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#profileDiv {
+    float: left;
+    width: 364px;
+}
+
+#profileImg {
+    width: 350px;
+    border: 7px solid black;
+}
+
