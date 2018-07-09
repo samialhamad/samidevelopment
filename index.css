@@ -30,6 +30,11 @@ p {
 
 ol {
     list-style-type: none;
+    width: 100%;
+    max-width: 500px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
