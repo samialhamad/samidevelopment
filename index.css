@@ -16,8 +16,18 @@ h2 {
 }
 
 #profileDiv {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 16px;
     float: left;
-    width: 300px;
+}
+
+@media screen and (max-width: 1170px) {
+    #profileDiv {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 #profileImg {
@@ -35,6 +45,12 @@ ol {
     padding: 0px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media screen and (max-width: 1170px) {
+    ol {
+        display: inline-block;
+    }
 }
 
 .card {
