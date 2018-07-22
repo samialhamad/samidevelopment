@@ -85,3 +85,16 @@ li {
     padding: 0px;
     margin: 0px;
 }
+
+.tagsList {
+    margin-top: 8px;
+}
+
+.tagLi {
+    display: inline;
+    margin-right: 16px;
+    background-color: #5dbfcc;
+    color: white;
+    padding: 2px 8px 2px 8px;
+    border-radius: 6px;
+}
