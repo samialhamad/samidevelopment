@@ -1,3 +1,5 @@
+const preferredDateFormat = "MMMM DD, YYYY";
+
 class BlogPost {
     constructor(blogPost) {
         if (blogPost) {
@@ -46,7 +48,7 @@ function renderBlogPosts() {
         blogPostLi.append(h2);
         
         var h3 = document.createElement("h3");
-        h3.innerHTML = blogPost.date;
+        h3.innerHTML = moment(blogPost.date).format(preferredDateFormat);
         blogPostLi.append(h3);
         
         var p = document.createElement("p");
