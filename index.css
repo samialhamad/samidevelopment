@@ -10,6 +10,19 @@ body {
     background-attachment: fixed;
 }
 
+#tableDiv {
+    width: 100%;
+}
+
+#tableRowDiv {
+    width: 100%;
+}
+
+.tableCell {
+    width: 30%;
+    display: inline-block;
+}
+
 h1 {
     font-family: 'Pacifico', cursive;
     text-align: center;
@@ -20,18 +33,19 @@ h2 {
     margin: 0px;
 }
 
+p {
+    margin: 0px;
+}
+
 #profileDiv {
-    width: 100%;
-    max-width: 300px;
-    margin-right: 16px;
-    float: left;
+    width: 300px;
 }
 
 @media screen and (max-width: 1170px) {
     #profileDiv {
-        display: inline-block;
+       /* display: inline-block;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto;*/
     }
 }
 
@@ -43,17 +57,11 @@ h2 {
     width: 300px;
 }
 
-p {
-    margin: 0px;
-}
-
 ol {
     list-style-type: none;
-    width: 100%;
+    min-width: 350px; 
     max-width: 500px;
     padding: 0px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 li {
@@ -72,6 +80,12 @@ li {
     border: 10px solid white;
     position: relative;
     text-align: left;
+}
+
+#tagFilterDiv {
+   /* width: 100%;
+    max-width: 300px;*/
+    margin-right: 16px;
 }
 
 .card h2 {

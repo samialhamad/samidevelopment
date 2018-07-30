@@ -32,6 +32,73 @@ function populateBlogPosts() {
         "games",
     ];
     blogPosts.push(blogPost);
+    
+    var blogPost2 = new BlogPost();
+    blogPost2.title = "First Day of School";
+    blogPost2.date = Date.parse("7/22/2018");
+    blogPost2.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost2.tags = [
+        "sports", 
+        "school",
+        "games",
+    ];
+    blogPosts.push(blogPost2);
+    
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "First Day of School";
+    blogPost3.date = Date.parse("7/22/2018");
+    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.tags = [
+        "sports", 
+        "school",
+        "games",
+    ];
+    blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "First Day of School";
+    blogPost3.date = Date.parse("7/22/2018");
+    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.tags = [
+        "sports", 
+        "school",
+        "games",
+    ];
+    blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "First Day of School";
+    blogPost3.date = Date.parse("7/22/2018");
+    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.tags = [
+        "sports", 
+        "school",
+        "games",
+    ];
+    blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "First Day of School";
+    blogPost3.date = Date.parse("7/22/2018");
+    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.tags = [
+        "sports", 
+        "school",
+        "games",
+    ];
+    blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "First Day of School";
+    blogPost3.date = Date.parse("7/22/2018");
+    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.tags = [
+        "sports", 
+        "school",
+        "games",
+    ];
+    blogPosts.push(blogPost3);
 }
 
 function renderBlogPosts() {
@@ -59,8 +126,8 @@ function renderBlogPosts() {
         tagDiv.setAttribute("class", "tagDiv");
         blogPostLi.append(tagDiv);
         
-        for (var i = 0; i < blogPost.tags.length; i++) {
-            var tag = blogPost.tags[i];
+        for (var x = 0; x < blogPost.tags.length; x++) {
+            var tag = blogPost.tags[x];
             
             var tagLabel = document.createElement("label");
             tagLabel.setAttribute("class", "tagLabel");
