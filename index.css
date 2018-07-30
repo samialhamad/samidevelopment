@@ -86,15 +86,16 @@ li {
     margin: 0px;
 }
 
-.tagsList {
+.tagDiv {
     margin-top: 8px;
 }
 
-.tagLi {
-    display: inline;
-    margin-right: 16px;
+.tagLabel {
+    display: inline-block;
+    margin: 0px 16px 6px 0px;
     background-color: #5dbfcc;
     color: white;
     padding: 2px 8px 2px 8px;
     border-radius: 6px;
 }
+

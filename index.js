@@ -29,7 +29,7 @@ function populateBlogPosts() {
     blogPost.tags = [
         "sports", 
         "school",
-        "games"
+        "games",
     ];
     blogPosts.push(blogPost);
 }
@@ -55,18 +55,18 @@ function renderBlogPosts() {
         p.innerHTML = blogPost.text;
         blogPostLi.append(p);
         
-        var tagsList = document.createElement("ol");
-        tagsList.setAttribute("class", "tagsList");
-        blogPostLi.append(tagsList);
+        var tagDiv = document.createElement("div");
+        tagDiv.setAttribute("class", "tagDiv");
+        blogPostLi.append(tagDiv);
         
         for (var i = 0; i < blogPost.tags.length; i++) {
             var tag = blogPost.tags[i];
             
-            var tagLi = document.createElement("li");
-            tagLi.setAttribute("class", "tagLi");
-            tagLi.innerHTML = tag;
+            var tagLabel = document.createElement("label");
+            tagLabel.setAttribute("class", "tagLabel");
+            tagLabel.innerHTML = tag;
             
-            tagsList.appendChild(tagLi);
+            tagDiv.appendChild(tagLabel);
         }
 
         blogPostList.appendChild(blogPostLi);
