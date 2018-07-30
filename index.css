@@ -19,8 +19,8 @@ body {
 }
 
 .tableCell {
-    width: 30%;
     display: inline-block;
+    margin: 8px;
 }
 
 h1 {
@@ -37,15 +37,15 @@ p {
     margin: 0px;
 }
 
+/*Profile*/
+
 #profileDiv {
     width: 300px;
+    vertical-align: top;
 }
 
 @media screen and (max-width: 1170px) {
     #profileDiv {
-       /* display: inline-block;
-        margin-left: auto;
-        margin-right: auto;*/
     }
 }
 
@@ -57,10 +57,13 @@ p {
     width: 300px;
 }
 
+/*Blog*/
+
 ol {
-    list-style-type: none;
+    width: 33%;
     min-width: 350px; 
     max-width: 500px;
+    list-style-type: none;
     padding: 0px;
 }
 
@@ -80,12 +83,6 @@ li {
     border: 10px solid white;
     position: relative;
     text-align: left;
-}
-
-#tagFilterDiv {
-   /* width: 100%;
-    max-width: 300px;*/
-    margin-right: 16px;
 }
 
 .card h2 {
@@ -112,4 +109,3 @@ li {
     padding: 2px 8px 2px 8px;
     border-radius: 6px;
 }
-
