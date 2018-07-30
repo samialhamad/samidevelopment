@@ -16,9 +16,15 @@ class BlogPost {
 
 var blogPosts = [];
 
+var unselectedTags = [];
+var selectedTags = [];
+
 window.onload = function() {
     populateBlogPosts();
     renderBlogPosts();
+    
+    populateTagFilters();
+    renderTagFilters();
 }
 
 function populateBlogPosts() {
@@ -100,7 +106,6 @@ function populateBlogPosts() {
     ];
     blogPosts.push(blogPost3);
 }
-
 function renderBlogPosts() {
     var blogPostList = document.getElementById("blogPostList");
     
@@ -130,7 +135,7 @@ function renderBlogPosts() {
             var tag = blogPost.tags[x];
             
             var tagLabel = document.createElement("label");
-            tagLabel.setAttribute("class", "tagLabel");
+            tagLabel.setAttribute("class", "tag selectedTag");
             tagLabel.innerHTML = tag;
             
             tagDiv.appendChild(tagLabel);
@@ -139,3 +144,17 @@ function renderBlogPosts() {
         blogPostList.appendChild(blogPostLi);
     }    
 }
+
+function populateTagFilters() {
+    for (var i = 0; i < blogPosts.length; i++) {
+        var blogPost = blogPosts[i];
+        
+        for (var x = 0; x < blogPost.tags.length; x++) {
+            var tag = blogPost.tags[x];
+            if (!unselectedTags.includes(tag)) {
+                unselectedTags.push(tag);
+            }
+        }
+    }
+}
+function renderTagFilters() {}
