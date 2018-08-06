@@ -24,7 +24,7 @@ window.onload = function() {
     renderBlogPosts();
     
     populateTagFilters();
-    renderTagFilters();
+    renderUnselectedTags();
 }
 
 function populateBlogPosts() {
@@ -157,4 +157,69 @@ function populateTagFilters() {
         }
     }
 }
-function renderTagFilters() {}
+
+function renderUnselectedTags() {
+    var unselectedTagsDiv = document.getElementById("unselectedTagsDiv");
+    
+    for (var i = 0; i < unselectedTags.length; i++) {
+        var unselectedTag = unselectedTags[i];
+        
+        var unselectedTagLabel = document.createElement("label");
+        unselectedTagLabel.setAttribute("class", "tag unselectedTag");
+        unselectedTagLabel.setAttribute("onclick", "didSelectTag(\"" + unselectedTag + "\")");
+        unselectedTagLabel.innerHTML = unselectedTag;
+        unselectedTagsDiv.appendChild(unselectedTagLabel);
+    }
+}
+function renderSelectedTags() {
+    var selectedTagsDiv = document.getElementById("selectedTagsDiv");
+    
+    for (var i = 0; i < selectedTags.length; i++) {
+        var selectedTag = selectedTags[i];
+        
+        var selectedTagLabel = document.createElement("label");
+        selectedTagLabel.setAttribute("class", "tag selectedTag");
+        selectedTagLabel.setAttribute("onclick", "didUnselectTag(\"" + selectedTag + "\")");
+        selectedTagLabel.innerHTML = selectedTag;
+        selectedTagsDiv.appendChild(selectedTagLabel);
+    }
+}
+
+function didSelectTag(tag) {
+    //unselected
+    var index = unselectedTags.indexOf(tag);
+    unselectedTags.splice(index, 1);
+    
+    var unselectedTagsDiv = document.getElementById("unselectedTagsDiv");
+    unselectedTagsDiv.innerHTML = "";
+    
+    renderUnselectedTags();
+    
+    //selected
+    selectedTags.push(tag);
+
+    var selectedTagsDiv = document.getElementById("selectedTagsDiv");
+    selectedTagsDiv.innerHTML = "";
+    
+    renderSelectedTags();
+}
+function didUnselectTag(tag) {
+    //selected
+    var index = selectedTags.indexOf(tag);
+    selectedTags.splice(index, 1);
+    
+    var selectedTagsDiv = document.getElementById("selectedTagsDiv");
+    selectedTagsDiv.innerHTML = "";
+    
+    renderSelectedTags();
+    
+    //unselected
+    unselectedTags.push(tag);
+
+    var unselectedTagsDiv = document.getElementById("unselectedTagsDiv");
+    unselectedTagsDiv.innerHTML = "";
+    
+    renderUnselectedTags();
+}
+
+//<label class="tag unselectedTag" onclick="clickedTag()">sports</label>
