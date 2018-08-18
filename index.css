@@ -44,11 +44,6 @@ p {
     vertical-align: top;
 }
 
-@media screen and (max-width: 1170px) {
-    #profileDiv {
-    }
-}
-
 #profileDiv h2 {
     text-align: center;
 }
@@ -59,22 +54,19 @@ p {
 
 /*Blog*/
 
-ol {
+#mainDiv {
     width: 33%;
     min-width: 350px; 
     max-width: 500px;
+}
+
+ol {
     list-style-type: none;
     padding: 0px;
 }
 
 li {
     margin-bottom: 16px;
-}
-
-@media screen and (max-width: 1170px) {
-    ol {
-        display: inline-block;
-    }
 }
 
 .card {

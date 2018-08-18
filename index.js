@@ -15,13 +15,15 @@ class BlogPost {
 }
 
 var blogPosts = [];
+var filteredBlogPosts = [];
 
 var unselectedTags = [];
 var selectedTags = [];
 
 window.onload = function() {
     populateBlogPosts();
-    renderBlogPosts();
+    filterBlogPosts();
+    renderFilteredBlogPosts();
     
     populateTagFilters();
     renderUnselectedTags();
@@ -30,30 +32,47 @@ window.onload = function() {
 
 function populateBlogPosts() {
     var blogPost = new BlogPost();
-    blogPost.title = "First Day of School";
+    blogPost.title = "1 Hello World";
     blogPost.date = Date.parse("7/22/2018");
-    blogPost.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost.text = "First Web App..";
     blogPost.tags = [
-        "sports", 
-        "school",
-        "games",
+        "coding", 
     ];
     blogPosts.push(blogPost);
     
     var blogPost2 = new BlogPost();
-    blogPost2.title = "First Day of School";
-    blogPost2.date = Date.parse("7/22/2018");
-    blogPost2.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost2.title = "2 First Day of Junior Year";
+    blogPost2.date = Date.parse("8/13/2018");
+    blogPost2.text = "First day of school...";
     blogPost2.tags = [
-        "sports", 
         "school",
-        "games",
     ];
     blogPosts.push(blogPost2);
     
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "First Day of School";
+    blogPost3.title = "3";
+    blogPost3.date = Date.parse("7/22/2018");
+    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.tags = [
+        "sports", 
+        "games",
+        "elvis",
+    ];
+    blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "4";
+    blogPost3.date = Date.parse("7/22/2018");
+    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.tags = [
+        "sports", 
+        "school",
+    ];
+    blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "5";
     blogPost3.date = Date.parse("7/22/2018");
     blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
     blogPost3.tags = [
@@ -64,7 +83,7 @@ function populateBlogPosts() {
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "First Day of School";
+    blogPost3.title = "6";
     blogPost3.date = Date.parse("7/22/2018");
     blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
     blogPost3.tags = [
@@ -75,29 +94,7 @@ function populateBlogPosts() {
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "First Day of School";
-    blogPost3.date = Date.parse("7/22/2018");
-    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
-    blogPost3.tags = [
-        "sports", 
-        "school",
-        "games",
-    ];
-    blogPosts.push(blogPost3);
-    
-    var blogPost3 = new BlogPost();
-    blogPost3.title = "First Day of School";
-    blogPost3.date = Date.parse("7/22/2018");
-    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
-    blogPost3.tags = [
-        "sports", 
-        "school",
-        "games",
-    ];
-    blogPosts.push(blogPost3);
-    
-    var blogPost3 = new BlogPost();
-    blogPost3.title = "First Day of School";
+    blogPost3.title = "7";
     blogPost3.date = Date.parse("7/22/2018");
     blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
     blogPost3.tags = [
@@ -107,11 +104,30 @@ function populateBlogPosts() {
     ];
     blogPosts.push(blogPost3);
 }
-function renderBlogPosts() {
+function filterBlogPosts() {
+    if (selectedTags.length == 0) {
+        filteredBlogPosts = blogPosts;
+    } else {
+        filteredBlogPosts = [];
+        for (var i = 0; i < blogPosts.length; i++) {
+            var blogPost = blogPosts[i];
+
+            for (var x = 0; x < blogPost.tags.length; x++) {
+                var tag = blogPost.tags[x];
+                if (selectedTags.includes(tag)) {
+                    filteredBlogPosts.push(blogPost);
+                }     
+            }
+        }
+    }
+}
+function renderFilteredBlogPosts() {
     var blogPostList = document.getElementById("blogPostList");
     
-    for (var i = 0; i < blogPosts.length; i++) {
-        var blogPost = blogPosts[i];
+    blogPostList.innerHTML = "";
+    
+    for (var i = 0; i < filteredBlogPosts.length; i++) {
+        var blogPost = filteredBlogPosts[i];
         
         var blogPostLi = document.createElement("li");
         blogPostLi.setAttribute("class", "card");
@@ -219,6 +235,9 @@ function didSelectTag(tag) {
     selectedTagsDiv.innerHTML = "";
     
     renderSelectedTags();
+    
+    filterBlogPosts();
+    renderFilteredBlogPosts();
 }
 function didUnselectTag(tag) {
     //selected
@@ -237,6 +256,9 @@ function didUnselectTag(tag) {
     unselectedTagsDiv.innerHTML = "";
     
     renderUnselectedTags();
+    
+    filterBlogPosts();
+    renderFilteredBlogPosts();
 }
 
 //<label class="tag unselectedTag" onclick="clickedTag()">sports</label>
