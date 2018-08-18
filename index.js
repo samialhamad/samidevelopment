@@ -25,6 +25,7 @@ window.onload = function() {
     
     populateTagFilters();
     renderUnselectedTags();
+    renderSelectedTags();
 }
 
 function populateBlogPosts() {
@@ -159,6 +160,14 @@ function populateTagFilters() {
 }
 
 function renderUnselectedTags() {
+    var unselectedTagLabel = document.getElementById("unselectedTagLabel");
+
+    if (unselectedTags.length == 0) {
+        unselectedTagLabel.style.display = "none";
+    } else {
+        unselectedTagLabel.style.display = "inline";
+    }
+    
     var unselectedTagsDiv = document.getElementById("unselectedTagsDiv");
     
     for (var i = 0; i < unselectedTags.length; i++) {
@@ -172,6 +181,14 @@ function renderUnselectedTags() {
     }
 }
 function renderSelectedTags() {
+    var selectedTagLabel = document.getElementById("selectedTagLabel");
+
+    if (selectedTags.length == 0) {
+        selectedTagLabel.style.display = "none";
+    } else {
+        selectedTagLabel.style.display = "inline";
+    }
+    
     var selectedTagsDiv = document.getElementById("selectedTagsDiv");
     
     for (var i = 0; i < selectedTags.length; i++) {
