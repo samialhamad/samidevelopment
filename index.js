@@ -57,7 +57,7 @@ function populateBlogPosts() {
     blogPost3.tags = [
         "sports", 
         "games",
-        "elvis",
+        "cars",
     ];
     blogPosts.push(blogPost3);
     

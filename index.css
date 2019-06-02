@@ -27,6 +27,7 @@ h1 {
     font-family: 'Pacifico', cursive;
     text-align: center;
     text-decoration: underline;
+    color: white;
 }
 
 h2 {
@@ -60,7 +61,14 @@ p {
     max-width: 500px;
 }
 
-ol {
+#sideDiv {
+    width: 25%;
+    vertical-align: top;
+    min-width: 350px; 
+    max-width: 500px;
+}
+
+ol, ul {
     list-style-type: none;
     padding: 0px;
 }
