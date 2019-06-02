@@ -30,84 +30,82 @@ window.onload = function() {
     renderSelectedTags();
 }
 
-function populateExtraLinks () {
-    var extraLink = new ExtraLink();
-    extraLink.title = "Photo Gallery";
-    extraLink.text = "Click the photo below to access the photo gallery";
-    //extraLink.imageSrc = ""
-}
-
 function populateBlogPosts() {
     var blogPost = new BlogPost();
     blogPost.title = "1 Hello World";
     blogPost.date = Date.parse("7/22/2018");
-    blogPost.text = "First Web App..";
+    blogPost.text = "My first web app. Welcome to the website!";
     blogPost.tags = [
-        "coding", 
+        "Coding", 
     ];
     blogPosts.push(blogPost);
     
     var blogPost2 = new BlogPost();
     blogPost2.title = "2 First Day of Junior Year";
     blogPost2.date = Date.parse("8/13/2018");
-    blogPost2.text = "First day of school...";
+    blogPost2.text = "First day of school";
     blogPost2.tags = [
-        "school",
+        "School",
     ];
     blogPosts.push(blogPost2);
     
     
     var blogPost3 = new BlogPost();
     blogPost3.title = "3";
-    blogPost3.date = Date.parse("7/22/2018");
-    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.date = Date.parse("12/21/2018");
+    blogPost3.text = "Start of Winter Break, got to see the Lakers vs Warriors";
     blogPost3.tags = [
-        "sports", 
-        "games",
-        "cars",
+        "Sports", 
+        "School",
     ];
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
     blogPost3.title = "4";
-    blogPost3.date = Date.parse("7/22/2018");
-    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.date = Date.parse("1/1/2019");
+    blogPost3.text = "Start of the new year and school semester!";
     blogPost3.tags = [
-        "sports", 
-        "school",
+        "Events", 
+        "School",
     ];
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
     blogPost3.title = "5";
-    blogPost3.date = Date.parse("7/22/2018");
-    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.date = Date.parse("2/16/2019");
+    blogPost3.text = "17th birthday with a 4 day weekend! Got to spend time with friends & family.";
     blogPost3.tags = [
-        "sports", 
-        "school",
-        "games",
+        "Events", 
+        "School",
     ];
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
     blogPost3.title = "6";
-    blogPost3.date = Date.parse("7/22/2018");
-    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.date = Date.parse("5/15/19");
+    blogPost3.text = "Finished my 5 AP Tests and now only have finals to go.";
     blogPost3.tags = [
-        "sports", 
-        "school",
-        "games",
+        "School",
     ];
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
     blogPost3.title = "7";
-    blogPost3.date = Date.parse("7/22/2018");
-    blogPost3.text = "I'm Sami, I'm currently 16 years old and enrolled at Folsom High School. I am very interested in basketball, more specifically the NBA, and enjoy playing video games such as Fortnite, 2K, PUBG, and much more.";
+    blogPost3.date = Date.parse("5/31/2019");
+    blogPost3.text = "Junior year is over and I got a 4.3 GPA this semester, while also painting my calipers red and painting my tire letters white over the last few weeks.";
     blogPost3.tags = [
-        "sports", 
-        "school",
-        "games",
+        "School",
+        "Events",
+    ];
+    blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "8";
+    blogPost3.date = Date.parse("6/1/2019");
+    blogPost3.text = "Back to working on this website while witnessing the Raptors take Game 1 of the finals.";
+    blogPost3.tags = [
+        "Coding",
+        "Events",
     ];
     blogPosts.push(blogPost3);
 }
