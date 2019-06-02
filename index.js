@@ -30,6 +30,13 @@ window.onload = function() {
     renderSelectedTags();
 }
 
+function populateExtraLinks () {
+    var extraLink = new ExtraLink();
+    extraLink.title = "Photo Gallery";
+    extraLink.text = "Click the photo below to access the photo gallery";
+    //extraLink.imageSrc = ""
+}
+
 function populateBlogPosts() {
     var blogPost = new BlogPost();
     blogPost.title = "1 Hello World";
@@ -161,6 +168,7 @@ function renderFilteredBlogPosts() {
         blogPostList.appendChild(blogPostLi);
     }    
 }
+
 
 function populateTagFilters() {
     for (var i = 0; i < blogPosts.length; i++) {

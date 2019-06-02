@@ -61,14 +61,8 @@ p {
     max-width: 500px;
 }
 
-#sideDiv {
-    width: 25%;
-    vertical-align: top;
-    min-width: 350px; 
-    max-width: 500px;
-}
 
-ol, ul {
+ol {
     list-style-type: none;
     padding: 0px;
 }
