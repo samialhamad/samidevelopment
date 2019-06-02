@@ -11,25 +11,26 @@ body {
 }
 
 .topnav {
-    background-color: 
+    margin: 20px
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #5dbfcc;
   color: white;
 }
 
 .topnav a {
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 50px;
+  padding: 10px 24px;
   text-decoration: none;
   font-size: 30px;
+  border-radius: 20px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: gray;
+  color: #5dbfcc;
 }
 
 a:link {
