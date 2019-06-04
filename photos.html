@@ -12,6 +12,7 @@
         
         <script src="utilities/moment.js"></script>
         <script src="index.js"></script>
+        <script src="photos.js"></script>
         
         <title>Sami's Personal Blog</title>
     </head>
@@ -23,9 +24,28 @@
             <a class="active" href="photos.html">Photos</a>
             <a href="interests.html">Interests</a>
             </div>
-        <div id="tableDiv">
-            <div id="tableRowDiv">
-            </div>
-        </div>
+        <!-- The grid: four columns -->
+                <div class="row">
+                    <div class="column">
+                        <img src="images/photosWhiteTires1.jpg" width="400" height="400" alt="White Tire Letters" onclick="myFunction(this);">
+                    </div>
+                    <div class="column">
+                        <img src="images/photosWhiteTires3.jpg" width="400" height="400" alt="White Tire Letters" onclick="myFunction(this);">
+                    </div>
+                    <div class="column">
+                        <img src="images/photosWhiteTires2.jpg" width="400" height="400" alt="White Tire Letters" onclick="myFunction(this);">                    </div>
+                    <div class="column">
+                      <img src="images/.jpg" width="400" height="400" alt="White Tire Letters" onclick="myFunction(this);">
+                    </div>
+                </div>
+<!-- The expanding image container -->
+                <div class="container">
+  <!-- Close the image -->
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <!-- Expanded image -->
+                    <img id="expandedImg" style="width:75%" style="width:50%">
+  <!-- Image text -->
+                    <div id="imgtext"></div>
+                </div>
     </body>
 </html>
