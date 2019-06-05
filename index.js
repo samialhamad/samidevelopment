@@ -51,17 +51,18 @@ function populateBlogPosts() {
     
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "3";
+    blogPost3.title = "3 Halfway!";
     blogPost3.date = Date.parse("12/21/2018");
-    blogPost3.text = "Start of Winter Break, got to see the Lakers vs Warriors";
+    blogPost3.text = "Start of Winter Break, got to see the Lakers vs Warriors on Christmas Day.";
     blogPost3.tags = [
         "Sports", 
         "School",
+        "Events",
     ];
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "4";
+    blogPost3.title = "4 New Year";
     blogPost3.date = Date.parse("1/1/2019");
     blogPost3.text = "Start of the new year and school semester!";
     blogPost3.tags = [
@@ -71,7 +72,7 @@ function populateBlogPosts() {
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "5";
+    blogPost3.title = "5 Birthday";
     blogPost3.date = Date.parse("2/16/2019");
     blogPost3.text = "17th birthday with a 4 day weekend! Got to spend time with friends & family.";
     blogPost3.tags = [
@@ -81,7 +82,7 @@ function populateBlogPosts() {
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "6";
+    blogPost3.title = "6 End of School Year";
     blogPost3.date = Date.parse("5/15/19");
     blogPost3.text = "Finished my 5 AP Tests and now only have finals to go.";
     blogPost3.tags = [
@@ -90,7 +91,7 @@ function populateBlogPosts() {
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "7";
+    blogPost3.title = "7 Last Day of School";
     blogPost3.date = Date.parse("5/31/2019");
     blogPost3.text = "Junior year is over and I got a 4.3 GPA this semester, while also painting my calipers red and painting my tire letters white over the last few weeks.";
     blogPost3.tags = [
@@ -100,12 +101,21 @@ function populateBlogPosts() {
     blogPosts.push(blogPost3);
     
     var blogPost3 = new BlogPost();
-    blogPost3.title = "8";
+    blogPost3.title = "8 Return to Code";
     blogPost3.date = Date.parse("6/1/2019");
-    blogPost3.text = "Back to working on this website while witnessing the Raptors take Game 1 of the finals.";
+    blogPost3.text = "Back to working on this website while watching the Raptors take Game 1 of the finals.";
     blogPost3.tags = [
         "Coding",
         "Events",
+    ];
+    blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "9 Continuation";
+    blogPost3.date = Date.parse("6/4/2019");
+    blogPost3.text = "Took a day two break from working on the website, but back to it! Added the Photos page and gallery, although not finished, is coming along after a lot of troubleshooting. Beginning to plan out the Interests page..";
+    blogPost3.tags = [
+        "Coding",
     ];
     blogPosts.push(blogPost3);
 }
