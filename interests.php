@@ -19,9 +19,9 @@
     <body>
         <h1>Interests and Hobbies</h1>
             <div class="topnav">
-                <a href="index.html">Home</a>
-                <a href="photos.html">Photos</a>
-                <a class="active" href="interests.html">Interests</a>
+                <a href="index.php">Home</a>
+                <a href="photos.php">Photos</a>
+                <a class="active" href="interests.php">Interests</a>
             </div>
             <div id="cardContainer">
                 <div class="flip-card">

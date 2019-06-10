@@ -18,9 +18,9 @@
     <body>
         <h1>Sami's Personal Blog</h1>
         <div class="topnav">
-            <a class="active" href="index.html">Home</a>
-            <a href="photos.html">Photos</a>
-            <a href="interests.html">Interests</a>
+            <a class="active" href="index.php">Home</a>
+            <a href="photos.php">Photos</a>
+            <a href="interests.php">Interests</a>
             </div>
         <div id="tableDiv">
             <div id="tableRowDiv">
