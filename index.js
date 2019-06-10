@@ -118,6 +118,16 @@ function populateBlogPosts() {
         "Coding",
     ];
     blogPosts.push(blogPost3);
+    
+    var blogPost3 = new BlogPost();
+    blogPost3.title = "10 Interests Page";
+    blogPost3.date = Date.parse("6/9/2019");
+    blogPost3.text = "During the last five days, I got to see the Raptors take a 3-1 lead against the Warriors before they play tomorrow in Toronto. Today, I started developing the interests page of the website using flipping cards to display hobbies/interests.";
+    blogPost3.tags = [
+        "Coding",
+        "Sports",
+    ];
+    blogPosts.push(blogPost3);
 }
 function filterBlogPosts() {
     if (selectedTags.length == 0) {
