@@ -16,6 +16,9 @@ p {
 
 img {
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .flip-card {
@@ -25,8 +28,15 @@ img {
   height: 300px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   border-radius: 10px;
-  float: left;
-  margin: 30px;
+  margin: 16px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 400px) {
+    .flip-card {
+        width: 100%;   
+        margin: 0px 0px 8px 0px;
+    }
 }
 
 /* This container is needed to position the front and back side */
@@ -50,6 +60,7 @@ img {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border: 4px solid white;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -66,3 +77,4 @@ img {
   transform: rotateY(180deg);
   border-radius: 10px;
 }
+
