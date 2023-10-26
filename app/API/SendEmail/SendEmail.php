@@ -13,13 +13,10 @@
     $message = $input->message;
     $attachment_filename = $input->attachment_filename;
 
-    if (true) {
-        //response
-        $response = [
-            "message" => "Success"
-        ]; 
-        api_response_success($response);
-    } else {
-        api_response_bad_request("Send email failed");
-    }
+    //response
+    $response = [
+        "message" => "Success"
+    ]; 
+    http_response_code(200);
+    echo json_encode($response);
 ?>
